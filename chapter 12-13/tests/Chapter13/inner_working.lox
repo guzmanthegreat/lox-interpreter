@@ -1,0 +1,7 @@
+class A {
+  m() { print "A"; inner(); }
+}
+class B < A {
+  m() { print "B"; }
+}
+B().m();

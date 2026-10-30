@@ -1,13 +1,8 @@
-//> Chunks of Bytecode chunk-c
 #include <stdlib.h>
 
 #include "chunk.h"
-//> chunk-c-include-memory
 #include "memory.h"
-//< chunk-c-include-memory
-//> Garbage Collection chunk-include-vm
 #include "vm.h"
-//< Garbage Collection chunk-include-vm
 
 void initChunk(Chunk* chunk) {
   chunk->count = 0;
@@ -16,29 +11,15 @@ void initChunk(Chunk* chunk) {
   chunk->lineCount = 0;
   chunk->lineCapacity = 0;
   chunk->lines = NULL;
-//> chunk-init-constant-array
   initValueArray(&chunk->constants);
-//< chunk-init-constant-array
 }
-//> free-chunk
 void freeChunk(Chunk* chunk) {
   FREE_ARRAY(uint8_t, chunk->code, chunk->capacity);
-//> chunk-free-lines
   FREE_ARRAY(LineStart, chunk->lines, chunk->lineCapacity);
-//< chunk-free-lines
-//> chunk-free-constants
   freeValueArray(&chunk->constants);
-//< chunk-free-constants
   initChunk(chunk);
 }
-//< free-chunk
-/* Chunks of Bytecode write-chunk < Chunks of Bytecode write-chunk-with-line
-void writeChunk(Chunk* chunk, uint8_t byte) {
-*/
-//> write-chunk
-//> write-chunk-with-line
 void writeChunk(Chunk* chunk, uint8_t byte, int line) {
-//< write-chunk-with-line
   if (chunk->capacity < chunk->count + 1) {
     int oldCapacity = chunk->capacity;
     chunk->capacity = GROW_CAPACITY(oldCapacity);
@@ -60,7 +41,6 @@ void writeChunk(Chunk* chunk, uint8_t byte, int line) {
         (LineStart){chunk->count - 1, line};
   }
 }
-//< write-chunk
 
 void writeConstant(Chunk* chunk, Value value, int line) {
   int index = addConstant(chunk, value);
@@ -91,15 +71,9 @@ int getLine(Chunk* chunk, int instruction) {
   }
   return -1;
 }
-//> add-constant
 int addConstant(Chunk* chunk, Value value) {
-//> Garbage Collection add-constant-push
   push(value);
-//< Garbage Collection add-constant-push
   writeValueArray(&chunk->constants, value);
-//> Garbage Collection add-constant-pop
   pop();
-//< Garbage Collection add-constant-pop
   return chunk->constants.count - 1;
 }
-//< add-constant

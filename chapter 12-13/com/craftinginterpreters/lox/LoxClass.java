@@ -1,85 +1,66 @@
-//> Classes lox-class
 package com.craftinginterpreters.lox;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
-
-/* Classes lox-class < Classes lox-class-callable
-class LoxClass {
-*/
-//> lox-class-callable
-class LoxClass implements LoxCallable {
-//< lox-class-callable
+class LoxClass extends LoxInstance implements LoxCallable {
   final String name;
-//> Inheritance lox-class-superclass-field
   final LoxClass superclass;
-//< Inheritance lox-class-superclass-field
-/* Classes lox-class < Classes lox-class-methods
-
-  LoxClass(String name) {
-    this.name = name;
-  }
-*/
-//> lox-class-methods
   private final Map<String, LoxFunction> methods;
-
-/* Classes lox-class-methods < Inheritance lox-class-constructor
-  LoxClass(String name, Map<String, LoxFunction> methods) {
-*/
-//> Inheritance lox-class-constructor
-  LoxClass(String name, LoxClass superclass,
+  LoxClass(LoxClass metaclass, String name, LoxClass superclass,
            Map<String, LoxFunction> methods) {
+    super(metaclass);
     this.superclass = superclass;
-//< Inheritance lox-class-constructor
     this.name = name;
     this.methods = methods;
   }
-//< lox-class-methods
-//> lox-class-find-method
   LoxFunction findMethod(String name) {
     if (methods.containsKey(name)) {
       return methods.get(name);
     }
-
-//> Inheritance find-method-recurse-superclass
     if (superclass != null) {
       return superclass.findMethod(name);
     }
-
-//< Inheritance find-method-recurse-superclass
     return null;
   }
-//< lox-class-find-method
+
+  LoxFunction findMethodWithInner(String name, LoxInstance instance) {
+    List<LoxFunction> chain = new ArrayList<>();
+    for (LoxClass klass = this; klass != null; klass = klass.superclass) {
+      if (klass.methods.containsKey(name)) chain.add(klass.methods.get(name));
+    }
+    if (chain.isEmpty()) return null;
+    return bindChain(chain, chain.size() - 1, instance);
+  }
+
+  private LoxFunction bindChain(List<LoxFunction> chain, int index,
+                                LoxInstance instance) {
+    LoxFunction inner = index == 0 ? null : bindChain(chain, index - 1, instance);
+    return chain.get(index).bind(instance, inner);
+  }
 
   @Override
   public String toString() {
     return name;
   }
-//> lox-class-call-arity
   @Override
   public Object call(Interpreter interpreter,
                      List<Object> arguments) {
     LoxInstance instance = new LoxInstance(this);
-//> lox-class-call-initializer
-    LoxFunction initializer = findMethod("init");
+    LoxFunction initializer = findMethodWithInner("init", instance);
     if (initializer != null) {
-      initializer.bind(instance).call(interpreter, arguments);
+      initializer.call(interpreter, arguments);
     }
-
-//< lox-class-call-initializer
     return instance;
   }
 
   @Override
   public int arity() {
-/* Classes lox-class-call-arity < Classes lox-initializer-arity
-    return 0;
-*/
-//> lox-initializer-arity
-    LoxFunction initializer = findMethod("init");
+    LoxFunction initializer = null;
+    for (LoxClass klass = this; klass != null; klass = klass.superclass) {
+      if (klass.methods.containsKey("init")) initializer = klass.methods.get("init");
+    }
     if (initializer == null) return 0;
     return initializer.arity();
-//< lox-initializer-arity
   }
-//< lox-class-call-arity
 }

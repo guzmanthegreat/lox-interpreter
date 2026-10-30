@@ -12,13 +12,15 @@ Book: Robert Nystrom, *Crafting Interpreters*
 - `tests/Chapter12/getters.lox`
 - `tests/Chapter13/beta_inner.lox`
 - `tests/Chapter13/arrays_design.lox`
-- `com/`, the provided Java jlox source used for the implementation discussion
+- `com/`, the Java jlox source with the Chapter 12–13 challenge features
 
 The answer files explain the design and implementation changes required by each challenge. The test files use the exact Lox examples from the chapter challenges where the book provides them.
 
-## Source limitation
+## Implemented features
 
-The Java source in this ZIP is the provided interpreter snapshot. The challenge answers identify the files and methods that must change, including `Parser.java`, `Stmt.java`, `Interpreter.java`, `Resolver.java`, `LoxClass.java`, `LoxInstance.java`, `LoxFunction.java`, `Expr.java`, and `Environment.java`.
+The Java source includes class methods using metaclasses, getter methods, the
+native `Array(size)` feature, and BETA-style `inner()` method dispatch. The
+tests in `tests/Chapter12/` and `tests/Chapter13/` exercise these features.
 
 The source snapshot contains additional coursework features from earlier chapters. Only the sections related to Chapters 12 and 13 are discussed in the answer files.
 

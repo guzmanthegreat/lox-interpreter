@@ -1,0 +1,6 @@
+var greeting = "hello";
+var name = "lox";
+print greeting + " " + name;
+greeting = "hi";
+print greeting;
+print "same" == "same";

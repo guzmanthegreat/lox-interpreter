@@ -36,5 +36,5 @@ gcc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
 ```
 
 The included source integrates compressed line information, long constants,
-dynamic stack growth, and in-place negation. The implementation notes explain
-the changes and the written answers discuss their trade-offs.
+dynamic stack growth, and in-place stack operations. The implementation notes
+explain the changes and the written answers discuss their trade-offs.

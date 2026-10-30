@@ -2,32 +2,47 @@
 
 This repository contains my coursework for **CS 4080.02: Concepts of Programming Languages**.
 
-The assignments follow the book [*Crafting Interpreters*](https://craftinginterpreters.com/) by Robert Nystrom. Each chapter folder contains the exercises, challenge solutions, and source code completed for that chapter.
+This follows [*Crafting Interpreters*](https://craftinginterpreters.com/) by Robert Nystrom. The folders group the assignments by their submission dates. See `REVIEW.md` for what works and what still needs work.
 
 ## Repository Structure
 
 ```text
-chapter 1/
-chapter 2/
-chapter 3/
-chapter 4/
-chapter 5/
-chapter 6/
-chapter 7/
+chapter 1-3/                         Chapters 1 through 3 coursework
+chapter 4-5/                         Chapters 4 and 5 coursework
+chapter 6-7/                         Chapters 6 and 7 coursework
+chapter 8-9/                         Java interpreter and Chapter 8–9 answers
+chapter 10-11/                       Java jlox and challenge work
+chapter 12-13/                       Java classes/inheritance work
+chapter 14-15/                       C clox and VM challenge work
+chapter 16-18/                       C clox compiler/value work
+chapter 19-21/                       C clox strings/tables/globals work
 ```
 
 ## Languages
 
-- Java
-- C
+- Java (jlox)
+- C (clox)
 
-## Purpose
+## Checking the code
 
-The purpose of this repository is to document my progress while learning how programming languages are scanned, parsed, interpreted, and executed.
+Run `python3 check.py` from this folder. It needs Python 3, Java 17 with the
+compiler module, and a C compiler. It builds into temporary folders and checks
+the output and errors from small Lox programs.
+
+The Java folders contain separate snapshots. Changes in one are not
+automatically included in the others. The three C folders currently contain
+the same full interpreter, including features from later chapters. They are
+not chapter-by-chapter snapshots yet.
+
+The interpreter starts from the book's source. `UPSTREAM_LICENSE` keeps its
+original license. Book publishing markers and old commented-out versions were
+removed to make the source easier to read.
 
 ## Course Information
 
 - **Course:** CS 4080.02 – Concepts of Programming Languages
 - **Student:** Josh Guzman
 
-This repository is intended for educational and coursework purposes.
+This repository is intended for educational and coursework purposes. Generated
+class files, executables, IDE metadata, and copied book/site files are not part
+of the coursework submission.

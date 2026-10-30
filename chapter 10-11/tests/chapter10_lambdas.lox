@@ -1,0 +1,9 @@
+fun thrice(fn) {
+  var i = 1;
+  while (i <= 3) {
+    fn(i);
+    i = i + 1;
+  }
+}
+
+thrice(fun(a) { print a; });
