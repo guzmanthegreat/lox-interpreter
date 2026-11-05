@@ -16,6 +16,7 @@ chapter 12-13/                       Java classes/inheritance work
 chapter 14-15/                       C clox and VM challenge work
 chapter 16-18/                       C clox compiler/value work
 chapter 19-21/                       C clox strings/tables/globals work
+chapter 22-23/                       C clox locals and control-flow work
 ```
 
 ## Languages
