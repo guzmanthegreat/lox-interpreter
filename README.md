@@ -95,10 +95,12 @@ The numbered directories are implementation stages of the same project:
 | `chapter 14-15/` | C VM and bytecode foundations |
 | `chapter 16-18/` | Compiler pipeline and runtime values |
 | `chapter 19-21/` | Strings, tables, globals, and object management |
-| `chapter 22-23/` | Locals, control flow, calls, functions, and closures |
+| `chapter 22-23/` | Locals, control flow, and closures |
+| [`chapter 24/`](chapter%2024/README.md) | Calls, functions, recursion, and native functions |
 
-The latest cumulative C implementation is in `chapter 22-23/clox/`; Chapter 24
-contains focused call/function documentation and tests against that source.
+The latest cumulative C implementation is in `chapter 22-23/clox/`; the
+[Chapter 24 stage](chapter%2024/README.md) contains focused call/function
+documentation and tests against that source.
 
 ## Testing
 
