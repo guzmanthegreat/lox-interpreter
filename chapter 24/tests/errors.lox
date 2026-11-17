@@ -1,0 +1,5 @@
+fun one(value) {
+  return value;
+}
+
+one();

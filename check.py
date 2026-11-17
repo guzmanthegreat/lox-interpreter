@@ -57,7 +57,7 @@ with tempfile.TemporaryDirectory() as temp:
         subprocess.run(["java", "--module", "jdk.compiler/com.sun.tools.javac.Main", "-d", str(build), *map(str, sources), *map(str, generated.glob("*.java"))], check=True)
         count += 1
 
-    for chapter in ["14-15", "16-18", "19-21"]:
+    for chapter in ["14-15", "16-18", "19-21", "22-23"]:
         folder = ROOT / ("chapter " + chapter)
         binary = Path(temp) / ("clox-" + chapter)
         subprocess.run(["cc", "-std=c99", "-O2", *map(str, sorted((folder / "clox").glob("*.c"))), "-lm", "-o", str(binary)], check=True)

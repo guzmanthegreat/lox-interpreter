@@ -17,6 +17,7 @@ chapter 14-15/                       C clox and VM challenge work
 chapter 16-18/                       C clox compiler/value work
 chapter 19-21/                       C clox strings/tables/globals work
 chapter 22-23/                       C clox locals and control-flow work
+chapter 24/                          Chapter 24 calls/functions coverage
 ```
 
 ## Languages
@@ -32,8 +33,9 @@ the output and errors from small Lox programs.
 
 The Java folders contain separate snapshots. Changes in one are not
 automatically included in the others. The three C folders currently contain
-the same full interpreter, including features from later chapters. They are
-not chapter-by-chapter snapshots yet.
+the same full interpreter, including features from later chapters. Chapter 24
+documents and tests the calls/functions portion of the cumulative
+implementation.
 
 The interpreter starts from the book's source. `UPSTREAM_LICENSE` keeps its
 original license. Book publishing markers and old commented-out versions were
