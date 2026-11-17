@@ -3,7 +3,7 @@
 This stage adds object-oriented features to the Java interpreter, including
 classes, inheritance, methods, getters, and static methods.
 
-## Included files
+## Contents
 
 - `answers/Chapter12_Classes_Challenges.md`
 - `answers/Chapter13_Inheritance_Challenges.md`
@@ -13,7 +13,8 @@ classes, inheritance, methods, getters, and static methods.
 - `tests/Chapter13/arrays_design.lox`
 - `com/`, the Java jlox source with the Chapter 12–13 challenge features
 
-The answer files explain the design and implementation changes required by each challenge. The test files use the exact Lox examples from the chapter challenges where the book provides them.
+The answer files explain the design and implementation changes. The test files
+exercise the language features added in this stage.
 
 ## Implemented features
 
@@ -21,7 +22,7 @@ The Java source includes class methods using metaclasses, getter methods, the
 native `Array(size)` feature, and BETA-style `inner()` method dispatch. The
 tests in `tests/Chapter12/` and `tests/Chapter13/` exercise these features.
 
-The source snapshot contains additional features from earlier implementation stages. The answer files focus on the classes and inheritance work added here.
+The source includes the cumulative Java implementation from earlier stages.
 
 ## Sources
 

@@ -14,11 +14,11 @@ focused tests live in `../chapter 24/` and use this same source tree.
 - Function declarations, calls, parameters, returns, recursion, call frames,
   arity checks, and the native `clock()` function.
 
-Compile and run:
+## Build and run
 
 ```sh
 cd clox
-cc -std=c99 -O2 *.c -lm -o clox
+cc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
 ./clox ../tests/switch_and_continue.lox
 ```
 

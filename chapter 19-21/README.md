@@ -1,10 +1,7 @@
 # Lox Interpreter — Strings, Tables, and Globals
 
-Status: this folder contains a copy of the full C interpreter. The core chapter
-features run, but the chapter challenges are not completed. See `../REVIEW.md`.
-
-This folder continues the cumulative C `clox` implementation from Chapters
-16–18.
+This stage continues the cumulative C `clox` implementation with strings,
+hash tables, and global variables.
 
 ## Chapters covered
 
@@ -19,6 +16,6 @@ support, and global variable declaration, lookup, and assignment.
 
 ```sh
 cd clox
-gcc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
+cc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
 ./clox ../tests/strings_and_globals.lox
 ```

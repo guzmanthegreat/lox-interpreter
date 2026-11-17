@@ -4,10 +4,10 @@ This stage introduces the C bytecode VM and its foundational runtime work.
 
 ## Contents
 
-- `clox/` — C source code for the bytecode interpreter and virtual machine, including the integrated challenge changes.
-- `answers/chapter14/` — written answers for all three Chapter 14 challenges.
-- `answers/chapter15/` — written answers for all four Chapter 15 challenges.
-- `tests/` — small Lox programs for testing the VM.
+- `clox/` — C source for the bytecode interpreter and virtual machine.
+- `answers/chapter14/` — design notes for the Chapter 14 challenges.
+- `answers/chapter15/` — design notes for the Chapter 15 challenges.
+- `tests/` — Lox programs for testing the VM.
 
 ## Challenges covered
 
@@ -31,7 +31,7 @@ From the `clox` directory, compile the source files with a C compiler. For
 example:
 
 ```sh
-gcc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
+cc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
 ./clox ../tests/arithmetic.lox
 ```
 

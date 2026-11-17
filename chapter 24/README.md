@@ -4,7 +4,7 @@ This stage completes the bytecode VM work through **Calls and Functions**. The
 implementation is shared with the cumulative C interpreter in
 `../chapter 22-23/clox/` so that the earlier chapter features remain available.
 
-## Chapter 24 features
+## Features
 
 - Function declarations compile to `ObjFunction` constants and `OP_CLOSURE`.
 - Calls use `CallFrame` records with one frame per active function.
@@ -16,7 +16,9 @@ implementation is shared with the cumulative C interpreter in
   included.
 - Runtime errors include a Lox stack trace.
 
-Build and run from the repository root:
+## Build and run
+
+From the repository root:
 
 ```sh
 cc -std=c99 -Wall -Wextra -O2 "chapter 22-23/clox"/*.c -lm -o /tmp/clox-chapter24

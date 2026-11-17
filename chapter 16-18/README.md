@@ -1,10 +1,7 @@
 # Lox Interpreter — Compiler and Runtime Values
 
-Status: this folder contains a copy of the full C interpreter. The core chapter
-features run, but the chapter challenges are not completed. See `../REVIEW.md`.
-
-This folder continues the cumulative C `clox` implementation from Chapters
-14–15.
+This stage continues the cumulative C `clox` implementation with the compiler
+pipeline and runtime value system.
 
 ## Chapters covered
 
@@ -20,6 +17,6 @@ and `nil`.
 
 ```sh
 cd clox
-gcc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
+cc -std=c99 -Wall -Wextra -O2 *.c -lm -o clox
 ./clox ../tests/expressions.lox
 ```
