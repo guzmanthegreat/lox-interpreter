@@ -1,4 +1,4 @@
-# Crafting Interpreters Chapters 22–24
+# Lox Interpreter — Locals, Control Flow, and Calls
 
 This folder contains the cumulative C `clox` implementation through local
 variables, control flow, calls, and functions. The Chapter 24 documentation and

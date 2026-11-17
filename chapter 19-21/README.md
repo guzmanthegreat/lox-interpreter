@@ -1,4 +1,4 @@
-# Crafting Interpreters Chapters 19–21
+# Lox Interpreter — Strings, Tables, and Globals
 
 Status: this folder contains a copy of the full C interpreter. The core chapter
 features run, but the chapter challenges are not completed. See `../REVIEW.md`.

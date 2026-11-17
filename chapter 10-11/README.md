@@ -1,6 +1,6 @@
-# Crafting Interpreters Chapters 10–11 Challenges
+# Lox Interpreter — Functions and Resolution
 
-This submission contains:
+This stage contains:
 
 - `jlox/`: the Java tree-walk interpreter source used for Chapters 10–11.
 - `chapter_10-11_challenges.md`: written answers and implementation notes

@@ -1,7 +1,7 @@
-# Crafting Interpreters Chapter 24
+# Lox Interpreter — Calls and Functions
 
-This submission completes the bytecode VM work through Chapter 24, **Calls and
-Functions**. The implementation is shared with the cumulative C interpreter in
+This stage completes the bytecode VM work through **Calls and Functions**. The
+implementation is shared with the cumulative C interpreter in
 `../chapter 22-23/clox/` so that the earlier chapter features remain available.
 
 ## Chapter 24 features

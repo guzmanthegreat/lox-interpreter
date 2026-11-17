@@ -1,6 +1,6 @@
 # Implementation Review
 
-The repository now includes a `chapter 22-23/` C submission. Its checker
+The repository now includes a cumulative `chapter 22-23/` C implementation. Its checker
 compiles the Java snapshots and every C snapshot, then verifies local-variable
 closures, loops, `switch`, `continue`, error handling, and the earlier language
 features.

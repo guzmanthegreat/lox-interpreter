@@ -1,4 +1,4 @@
-# Crafting Interpreters Chapters 16–18
+# Lox Interpreter — Compiler and Runtime Values
 
 Status: this folder contains a copy of the full C interpreter. The core chapter
 features run, but the chapter challenges are not completed. See `../REVIEW.md`.

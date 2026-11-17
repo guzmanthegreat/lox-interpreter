@@ -1,6 +1,6 @@
-# Crafting Interpreters Chapters 14–15 Submission
+# Lox Interpreter — Bytecode VM Foundations
 
-This submission covers Chapters 14 and 15 of *Crafting Interpreters*.
+This stage introduces the C bytecode VM and its foundational runtime work.
 
 ## Contents
 

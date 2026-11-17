@@ -1,8 +1,7 @@
-# Crafting Interpreters Chapters 12 and 13 Challenge Submission
+# Lox Interpreter — Classes and Inheritance
 
-Student: Josh Guzman  
-Course: CS 4080.02, Concepts of Programming Languages  
-Book: Robert Nystrom, *Crafting Interpreters*
+This stage adds object-oriented features to the Java interpreter, including
+classes, inheritance, methods, getters, and static methods.
 
 ## Included files
 
@@ -22,7 +21,7 @@ The Java source includes class methods using metaclasses, getter methods, the
 native `Array(size)` feature, and BETA-style `inner()` method dispatch. The
 tests in `tests/Chapter12/` and `tests/Chapter13/` exercise these features.
 
-The source snapshot contains additional coursework features from earlier chapters. Only the sections related to Chapters 12 and 13 are discussed in the answer files.
+The source snapshot contains additional features from earlier implementation stages. The answer files focus on the classes and inheritance work added here.
 
 ## Sources
 
