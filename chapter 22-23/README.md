@@ -1,8 +1,9 @@
-# Lox Interpreter — Locals, Control Flow, and Calls
+# Lox Interpreter — Locals, Control Flow, Calls, and Closures
 
 This folder contains the cumulative C `clox` implementation through local
-variables, control flow, calls, and functions. The Chapter 24 documentation and
-focused tests live in `../chapter 24/` and use this same source tree.
+variables, control flow, calls, functions, and closures. The Chapter 24 and
+Chapter 25 documentation and focused tests live in `../chapter 24/` and
+`../chapter 25/`, using this same source tree.
 
 ## Implemented features
 

@@ -97,10 +97,12 @@ The numbered directories are implementation stages of the same project:
 | `chapter 19-21/` | Strings, tables, globals, and object management |
 | `chapter 22-23/` | Locals, control flow, and closures |
 | [`chapter 24/`](chapter%2024/README.md) | Calls, functions, recursion, and native functions |
+| [`chapter 25/`](chapter%2025/README.md) | Closures, captured locals, and upvalues |
 
 The latest cumulative C implementation is in `chapter 22-23/clox/`; the
-[Chapter 24 stage](chapter%2024/README.md) contains focused call/function
-documentation and tests against that source.
+[Chapter 24 stage](chapter%2024/README.md) and
+[Chapter 25 stage](chapter%2025/README.md) contain focused documentation and
+tests against that shared source.
 
 ## Testing
 

@@ -69,4 +69,15 @@ with tempfile.TemporaryDirectory() as temp:
                  "".join(str(i) + "\n" for i in range(300)))
         run_case(cmd, 'fun outer(n) { var x = n; fun get() { return x; } if (n > 0) outer(n-1); return get; } print outer(30)();', "30\n")
         print("C", chapter, "passed")
+    closure_binary = Path(temp) / "clox-chapter25"
+    source_dir = ROOT / "chapter 22-23" / "clox"
+    subprocess.run(["cc", "-std=c99", "-O2", *map(str, sorted(source_dir.glob("*.c"))),
+                    "-lm", "-o", str(closure_binary)], check=True)
+    closure_output = subprocess.run(
+        [str(closure_binary), str(ROOT / "chapter 25/tests/closures.lox")],
+        capture_output=True, text=True, check=True)
+    assert closure_output.stdout == "11\n12\n1\n13\nouter middle\n", closure_output.stdout
+    assert closure_output.stderr == "", closure_output.stderr
+    count += 1
+    print("C chapter 25 closures passed")
 print(count, "checks passed")

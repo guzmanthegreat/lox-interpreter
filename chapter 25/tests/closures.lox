@@ -1,0 +1,30 @@
+fun makeCounter(start) {
+  var count = start;
+  fun increment() {
+    count = count + 1;
+    return count;
+  }
+  return increment;
+}
+
+var counter = makeCounter(10);
+print counter();
+print counter();
+
+var other = makeCounter(0);
+print other();
+print counter();
+
+fun outer() {
+  var x = "outer";
+  fun middle() {
+    var y = "middle";
+    fun inner() {
+      print x + " " + y;
+    }
+    return inner;
+  }
+  return middle();
+}
+
+outer()();

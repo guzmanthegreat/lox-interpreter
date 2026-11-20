@@ -25,5 +25,5 @@ cc -std=c99 -Wall -Wextra -O2 "chapter 22-23/clox"/*.c -lm -o /tmp/clox-chapter2
 /tmp/clox-chapter24 "chapter 24/tests/functions.lox"
 ```
 
-The cumulative source also contains later closure and class code; the tests in
-this folder focus on calls, parameters, returns, recursion, and native functions.
+The cumulative source also contains the Chapter 25 closure runtime; focused
+closure documentation and tests live in `../chapter 25/`.
